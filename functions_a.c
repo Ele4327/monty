@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+ * add_lst_nd - Add node to front of doubly linked list.
+ * @header: Pointer to head of list.
+ * @x: Node value.
+ * Return: 0 if success, -1 if failed.
+ */
+
 int add_lst_nd(stck_b **header, int x)
 {
 	stck_b *nw_nd;
@@ -35,6 +42,11 @@ int add_lst_nd(stck_b **header, int x)
 	return (0);
 }
 
+/**
+ * dlt_lst_nd - Deletes node at end of doubly linked list.
+ * @header: Pointer to head of doubly linked list.
+ */
+
 void dlt_lst_nd(stck_b **header)
 {
 	stck_b *dlt = NULL;
@@ -53,6 +65,11 @@ void dlt_lst_nd(stck_b **header)
 	}
 }
 
+/**
+ * free_lst - Frees a doubly linked list with only int data.
+ * @header: Pointer to head of list.
+ */
+
 void free_lst(stck_b **header)
 {
 	if (!header)
@@ -65,6 +82,6 @@ void free_lst(stck_b **header)
 		*header = (*header)->next;
 		free((*header)->prev);
 	}
-	
+
 	free(*header);
 }

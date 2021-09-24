@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * x_eql_nmbr - Function
+ * @x: Pointer to constant character.
+ * Return: Always 0.
+ */
+
 int x_eql_nmbr(const char *x)
 {
 	int z = 0;
@@ -13,20 +19,27 @@ int x_eql_nmbr(const char *x)
 	{
 		if (isdigit(*(x + z)) == 0)
 		{
-			return(-1);
+			return (-1);
 		}
 	}
 
-	return(0);
+	return (0);
 }
+
+/**
+ * push - Pushes an element to the stack.
+ * @header: Head of linked list.
+ * @line_number: Bytecode number.
+ * @x: Integer.
+ */
 
 void push(stck_b **header, unsigned int line_number, const char *x)
 {
 	if (!header)
-	{	
+	{
 		return;
 	}
-	
+
 	if (x_eql_nmbr(x) == -1)
 	{
 		printf("L%u: usage: push integer\n", line_number);
@@ -42,6 +55,12 @@ void push(stck_b **header, unsigned int line_number, const char *x)
 		}
 	}
 }
+
+/**
+ * pop - Removes the top element of the stack.
+ * @header: Head of linked list.
+ * @line_number: Bytecode number.
+ */
 
 void pop(stck_b **header, unsigned int line_number)
 {

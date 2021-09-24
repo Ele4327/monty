@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	}
 
 	y = open(argv[1], O_RDONLY);
-	
+
 	if (y == -1)
 	{
 		printf("Error: Can't open file %s\n", argv[1]);
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	}
 
 	tkn = strtok(bffr, "\n\t\a\r ;:");
-	
+
 	while (tkn != NULL)
 	{
 		if (psh == 1)
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 		tkn = strtok(NULL, "\n\t\a\r ;:");
 	}
 
-	free_lst(&header); 
+	free_lst(&header);
 	free(bffr);
 	close(y);
 	return (0);
