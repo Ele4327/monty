@@ -1,4 +1,4 @@
-#include "header.h"
+#include "monty.h"
 
 int x_eql_nmbr(const char *x)
 {
