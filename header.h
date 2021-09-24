@@ -28,6 +28,7 @@ typedef struct strck_op
 } strck_op_out;
 
 /* Main Functions Prototypes */
+
 void (*opfunc(char *tkn_a))(stck_b **stack, unsigned int line_number);
 void push(stck_b **h, unsigned int line_number, const char *n);
 void pop(stck_b **h, unsigned int line_number);
