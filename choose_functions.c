@@ -1,4 +1,4 @@
-#include "header.h"
+#include "monty.h"
 
 void (*opfunc(char *tkn_a))(stck_b **stack, unsigned int line_number)
 {
