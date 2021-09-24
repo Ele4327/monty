@@ -1,4 +1,4 @@
-#include "header.h"
+#include "monty.h"
 
 void swap(stck_b **header, unsigned int line_number)
 {
