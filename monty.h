@@ -41,6 +41,7 @@ void _add(stck_b **header, unsigned int line_number);
 void _sub(stck_b **header, unsigned int line_number);
 void _mul(stck_b **header, unsigned int line_number);
 void _div(stck_b **header, unsigned int line_number);
+void _mod(stck_b **header, unsigned int line_number);
 
 /* Stacks Prototypes */
 int add_lst_nd(stck_b **h, int n);
