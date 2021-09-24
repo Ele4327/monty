@@ -8,8 +8,12 @@ void (*opfunc(char *tkn_a))(stck_b **stack, unsigned int line_number)
 		{"pop", pop},
 		{"pint", pint},
 		{"swap", swap},
-		{"add", _add},
 		{"nop", nop},
+		{"add", _add},
+		{"sub", _sub},
+		{"div", _div},
+		{"mul", _mul},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
