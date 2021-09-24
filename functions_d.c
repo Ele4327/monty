@@ -57,3 +57,22 @@ void _div(stck_b **header, unsigned int line_number)
     free((*header) -> prev);
     (*header) -> prev = NULL;
 }
+
+void _mod(stck_b **header, unsigned int line_number)
+{
+	if (header == NULL || *header == NULL)
+	{
+		printf("L%u: can't mod, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	if ((*header) -> x == 0 || (*header) -> next -> x == 0)
+	{
+		printf("L%u: division by zero\n", line_number);
+	}
+
+	(*header) -> next-> x %= (*header) -> x;
+	(*header) = (*header) -> next;
+	free((*header) -> prev);
+	(*header) -> prev = NULL;
+}
