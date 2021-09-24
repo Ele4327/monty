@@ -56,18 +56,3 @@ void pop(stck_b **header, unsigned int line_number)
 		dlt_lst_nd(header);
 	}
 }
-
-void _add(stck_b **header, unsigned int line_number)
-{
-	if (*header == NULL || (*header)-> next == NULL)
-	{
-		printf("L%u: can't add, stack too short\n", line_number);
-		exit(EXIT_FAILURE);
-	}
-
-	(*header) -> next -> x += (*header) -> x;
-	(*header) = (*header) -> next;
-	free((*header) -> prev);
-	(*header) -> prev = NULL;
-}
-
